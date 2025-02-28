@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -78,16 +79,16 @@ class OrderProcessorTest {
         assertEquals(30, ORDER_PROCESSOR.computeTotal(itemList));
     }
 
-    // static void printNodes(int[] nodes) {
-    //     for (int i = 0; i < nodes.length; ++i) {
+    static void printNodes(int[] nodeList) {
+        for (int i = 0; i < nodeList.length; ++i) {
         
-    //         System.out.println("Node " + i);
-    //         System.out.println(nodes[i]);
-    //     }
-    // }
+            System.out.println("Node " + i);
+            System.out.println(nodeList[i]);
+        }
+    }
 
-    // @Test
-    // void nodeTest() {
-    //     printNodes(ORDER_PROCESSOR.nodes[]);
-    // }
+    @AfterAll
+    static void nodeTest() {
+        printNodes(OrderProcessor.nodes);
+    }
 }
