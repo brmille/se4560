@@ -25,7 +25,7 @@ import java.util.List;
         // Discount logic
 <span class="fc bfc" id="L26" title="All 2 branches covered.">        if (total &gt; 100) {</span>
 <span class="fc" id="L27">            total *= 0.9; // 10% discount</span>
-<span class="fc" id="L28">        } else {</span>
+        } else {
             // if any item is discountEligible, apply a 5% discount
 <span class="fc" id="L30">            boolean discountFound = false;</span>
 <span class="fc bfc" id="L31" title="All 2 branches covered.">            for (Item item : items) {</span>
@@ -33,7 +33,7 @@ import java.util.List;
 <span class="fc" id="L33">                    discountFound = true;</span>
 <span class="fc" id="L34">                    break;</span>
                 }
-            }
+<span class="fc" id="L36">            }</span>
 <span class="fc bfc" id="L37" title="All 2 branches covered.">            if (discountFound) {</span>
 <span class="fc" id="L38">                total *= 0.95; // 5% discount</span>
             }
@@ -64,7 +64,7 @@ import java.util.List;
 <span class="fc" id="L64">            total += subTotal;</span>
 
 <span class="fc" id="L66">            nodes[2] += 1;</span>
-        }
+<span class="fc" id="L67">        }</span>
 <span class="fc" id="L68">        nodes[4] += 1;</span>
 <span class="fc" id="L69">        return total;</span>
     }

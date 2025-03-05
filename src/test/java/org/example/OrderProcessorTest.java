@@ -80,10 +80,10 @@ class OrderProcessorTest {
     }
 
     static void printNodes(int[] nodeList) {
+        System.out.println("Instrumentation report for getTotal():");
         for (int i = 0; i < nodeList.length; ++i) {
-        
-            System.out.println("Node " + i);
-            System.out.println(nodeList[i]);
+            int curNode = i+1;
+            System.out.println("Node " + curNode + ": " + nodeList[i]);
         }
     }
 
